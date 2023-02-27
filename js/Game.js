@@ -201,23 +201,8 @@ class Game {
   }
 
   //collide
-  handleObstacleCollision(index) {
-    if(cars[index-1].collide(obstacle1) || cars[index-1].collide(obstacle2)) {
-
-    if (this.leftKeyActive) {
-      player.positionX += 100;
-    } else {
-      player.positionX -= 100;
-    }
-
-    if(player.life > 0){
-      player.life -= 185 / 4;
-    }
-
-      player.update();
-    }
-  }
-
+  
+  
   handleFuel(index) {
     // Adicione o combustível
     cars[index - 1].overlap(fuels, function(collector, collected) {
